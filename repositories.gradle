@@ -1,0 +1,28 @@
+repositories {
+    maven {
+        url "${nexusUrl}/repository/maven-releases/"
+        credentials {
+            username nexusUser
+            password nexusPass
+        }
+    }
+    maven {
+        url "${nexusUrl}/repository/maven-snapshots/"
+        credentials {
+            username nexusUser
+            password nexusPass
+        }
+    }
+
+    jcenter()
+
+    mavenCentral()
+
+    maven { url "https://repo.spring.io/milestone" }
+
+    maven { url "https://repo.spring.io/snapshot" }
+
+    maven {
+        url "http://oss.jfrog.org/artifactory/oss-snapshot-local/"
+    }
+}
